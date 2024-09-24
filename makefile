@@ -1,0 +1,13 @@
+run:
+	@g++ main.cpp -o main
+	@./main
+
+
+
+state:
+	git status
+
+
+
+
+
