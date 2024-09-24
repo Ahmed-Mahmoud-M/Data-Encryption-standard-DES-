@@ -1,18 +1,18 @@
 #include<iostream>
-#include "headers/State.h"
-#include "src/State.cpp"
+#include "src/DES.cpp"
 
 
 
 int main(int argc, char const *argv[]) 
 {
     
-    
-    State state;
-   state.splite_string_32bit("computer");
-    std::cout << state.getstate() <<std::endl;
-    std::cout << state.getright() <<std::endl;
-    std::cout << state.getleft() <<std::endl;
+    DES des;
+    des.set_plaintext("COMPUTER");
+    std::cout << des.get_plaintext() << std::endl;
+    std::cout << des.init_Permutation() << std::endl;
+    std::cout << des.init_Permutation_inverse(des.init_Permutation()) << std::endl;
+  
+
     
     return 0;
 }
