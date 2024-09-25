@@ -39,6 +39,7 @@ public:
     std::string get_plaintext();
     std::string init_Permutation();
     std::string init_Permutation_inverse(std::string str);
+    
 };
 
 

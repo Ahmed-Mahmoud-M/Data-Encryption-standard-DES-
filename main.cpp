@@ -1,16 +1,22 @@
 #include<iostream>
-#include "src/DES.cpp"
+#include "src/State.cpp"
+#include "headers/Helper.h"
 
 
 
 int main(int argc, char const *argv[]) 
 {
     
-    DES des;
-    des.set_plaintext("COMPUTER");
-    std::cout << des.get_plaintext() << std::endl;
-    std::cout << des.init_Permutation() << std::endl;
-    std::cout << des.init_Permutation_inverse(des.init_Permutation()) << std::endl;
+   State state;
+   Helper h;
+   std::string str = "COMPUTER";
+   //std::cout << h.string_to_binary(str) << std::endl;
+    state.setState(h.string_to_binary(str));
+    std::cout << state.getRightside() << std::endl;
+    std::cout << state.getLeftside() << std::endl;
+
+    std::cout << h.xory(state.getright_bitset(),state.getleft_bitset()) << std::endl;
+   
   
 
     
