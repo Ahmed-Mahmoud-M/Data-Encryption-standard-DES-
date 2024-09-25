@@ -7,6 +7,10 @@ class Helper
 {
 
 public:
+
+   
+
+
     std::string  string_to_binary(std::string str) {
         std::string result = "";
         for (char c : str) {
@@ -29,10 +33,21 @@ public:
 
     }
 
+     std::bitset<32> xory(std::bitset<32>x, std::bitset<32> y) {
+        std::bitset<32> result;
 
-    //std::string hex_to_binary(std::string str) = 0;
+        for(int i = 0; i <32; i++){
+            result[i] = (x[i]+y[i]) % 2 ;
+        }
+
+        return result;
+    }
+    
    
 };
+
+
+
 
 
 
