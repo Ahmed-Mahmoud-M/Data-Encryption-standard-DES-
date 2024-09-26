@@ -37,4 +37,14 @@ std::string DES::init_Permutation_inverse(std::string str){
 }
 
 
+std::bitset<48> DES::expansionPermutations(std::bitset<32>rightside) {
+    std::bitset<48> result;
+    for(int i=0; i<48; i++) {
+        result[i] = rightside[EXPANSION_TABLE[i]-1];
+    }
+
+    return result;
+}
+
+
 
