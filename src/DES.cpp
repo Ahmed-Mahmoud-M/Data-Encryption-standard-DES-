@@ -47,4 +47,14 @@ std::bitset<48> DES::expansionPermutations(std::bitset<32>rightside) {
 }
 
 
+std::bitset<32> DES::permutationPostSBOX(std::bitset<32>rightside) {
+    std::bitset<32> result;
+    for(int i=0; i<32; i++) {
+        result[i] = rightside[PERMUTATION[i]-1];
+    }
+
+    return result;
+}
+
+
 
